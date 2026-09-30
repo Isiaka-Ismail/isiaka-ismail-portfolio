@@ -54,17 +54,156 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about">
-          <h2>About Me</h2>
-          <p>
-            I am a DevOps and Cloud Engineer focused on cloud infrastructure,
-            automation, containerization, and reliable deployment workflows.
-          </p>
+        <section id="about" className="bg-white px-6 py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-12 md:grid-cols-[1fr_1.5fr] md:items-start">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+                  About Me
+                </p>
+
+                <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                  Building systems that work beyond the demo.
+                </h2>
+              </div>
+
+              <div className="space-y-6 text-base leading-8 text-slate-600">
+                <p>
+                  I'm Isiaka Ismail, a DevOps and Cloud Engineer focused on building
+                  reliable infrastructure, automating deployment workflows, and
+                  improving the way applications are delivered and operated.
+                </p>
+
+                <p>
+                  My work spans cloud infrastructure, Infrastructure as Code,
+                  containerization, CI/CD, Linux systems, and Kubernetes. I enjoy
+                  taking infrastructure from manual and fragmented processes to
+                  systems that are reproducible, observable, and easier to maintain.
+                </p>
+
+                <p>
+                  I'm particularly interested in cloud architecture, automation,
+                  security, reliability, and the engineering practices that make
+                  systems easier to operate at scale.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section id="skills">
-          <h2>Technical Skills</h2>
-          <p>AWS · Terraform · Docker · Kubernetes · CI/CD · Linux · Python</p>
+        <section id="skills" className="bg-slate-50 px-6 py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+                Technical Skills
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Tools I use to build and operate infrastructure.
+              </h2>
+
+              <p className="mt-5 leading-7 text-slate-600">
+                My toolkit covers cloud platforms, infrastructure automation,
+                containers, deployment pipelines, and Linux-based systems.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  Cloud & Infrastructure
+                </h3>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "AWS",
+                    "EC2",
+                    "VPC",
+                    "IAM",
+                    "ECS",
+                    "RDS",
+                    "S3",
+                    "CloudWatch",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  DevOps & Automation
+                </h3>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Terraform",
+                    "Git",
+                    "GitHub Actions",
+                    "CI/CD",
+                    "Bash",
+                    "Python",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  Containers & Orchestration
+                </h3>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {["Docker", "Kubernetes", "Amazon EKS", "Amazon ECS", "Nginx"].map(
+                    (skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700"
+                      >
+                        {skill}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  Systems & Reliability
+                </h3>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Linux",
+                    "Networking",
+                    "SSH",
+                    "SSL/TLS",
+                    "Monitoring",
+                    "Security",
+                    "Troubleshooting",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="projects">
