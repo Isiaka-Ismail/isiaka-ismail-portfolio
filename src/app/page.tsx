@@ -391,14 +391,74 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact">
-          <h2>Let's Connect</h2>
-          <p>
-            Interested in cloud infrastructure, DevOps, or automation?
-            Let's connect.
-          </p>
+        <section id="contact" className="bg-slate-950 px-6 py-24 text-white">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+                  Get In Touch
+                </p>
+
+                <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight sm:text-5xl">
+                  Let's build reliable systems together.
+                </h2>
+
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                  I'm open to DevOps, Cloud Engineering, infrastructure, automation,
+                  and technical collaboration opportunities.
+                </p>
+
+                <a
+                  href="mailto:isiakaismail11@gmail.com"
+                  className="mt-8 inline-flex rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                >
+                  Send Me an Email
+                </a>
+              </div>
+
+              <div className="lg:justify-self-end">
+                <div className="space-y-5 text-sm">
+                  <a
+                    href="https://github.com/IsiakaOladayo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-slate-300 transition hover:text-white"
+                  >
+                    GitHub →
+                  </a>
+
+                  <a
+                    href="https://ng.linkedin.com/in/ismail-isiaka-664208246"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-slate-300 transition hover:text-white"
+                  >
+                    LinkedIn →
+                  </a>
+
+                  <a
+                    href="#home"
+                    className="block text-slate-300 transition hover:text-white"
+                  >
+                    Back to Top ↑
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
           </main>
+        <footer className="border-t border-slate-800 bg-slate-950 px-6 py-8 text-slate-400">
+          <div className="mx-auto flex max-w-6xl flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {new Date().getFullYear()} Isiaka Ismail. All rights reserved.
+            </p>
+
+            <p>
+              DevOps & Cloud Engineering
+            </p>
+          </div>
+        </footer>
     </>
   );
 }
