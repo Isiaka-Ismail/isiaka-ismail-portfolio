@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
@@ -206,32 +207,67 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects">
-          <h2>Featured Projects</h2>
+        <section id="projects" className="bg-white px-6 py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+                Featured Projects
+              </p>
 
-          <article>
-            <h3>AWS High-Availability Architecture</h3>
-            <p>
-              A highly available AWS infrastructure designed and provisioned
-              using Terraform.
-            </p>
-          </article>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Infrastructure built through hands-on engineering.
+              </h2>
 
-          <article>
-            <h3>TradeCore CI/CD Pipeline</h3>
-            <p>
-              A containerized CI/CD workflow for testing, scanning, building,
-              and deploying a backend application.
-            </p>
-          </article>
+              <p className="mt-5 leading-7 text-slate-600">
+                A selection of cloud, DevOps, and infrastructure projects where I
+                applied automation, reliability, security, and deployment practices.
+              </p>
+            </div>
 
-          <article>
-            <h3>Kubernetes Infrastructure</h3>
-            <p>
-              Kubernetes infrastructure designed for deploying and managing
-              containerized applications.
-            </p>
-          </article>
+            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+              <ProjectCard
+                category="Cloud Architecture"
+                title="AWS High-Availability Architecture"
+                description="Designed and provisioned a highly available AWS application architecture using Terraform, ECS Fargate, Application Load Balancer, Aurora PostgreSQL, ElastiCache Redis, and multi-region resilience."
+                technologies={[
+                  "AWS",
+                  "Terraform",
+                  "ECS Fargate",
+                  "Aurora",
+                  "ALB",
+                  "Redis",
+                ]}
+              />
+
+              <ProjectCard
+                category="CI/CD & Containers"
+                title="TradeCore CI/CD Pipeline"
+                description="Built a CI/CD workflow for a containerized backend that automates testing, Docker image building, vulnerability scanning, and deployment preparation for AWS."
+                technologies={[
+                  "GitHub Actions",
+                  "Docker",
+                  "Trivy",
+                  "Node.js",
+                  "AWS ECR",
+                  "ECS",
+                ]}
+              />
+
+              <ProjectCard
+                category="Cloud Infrastructure"
+                title="HNG DevOps Infrastructure"
+                description="Deployed and secured production-style applications on AWS EC2 with Linux hardening, SSH security, firewall configuration, Nginx reverse proxying, process management, and HTTPS."
+                technologies={[
+                  "AWS EC2",
+                  "Linux",
+                  "Nginx",
+                  "SSH",
+                  "UFW",
+                  "HTTPS",
+                ]}
+              />
+            </div>
+          </div>
         </section>
 
         <section id="experience">
