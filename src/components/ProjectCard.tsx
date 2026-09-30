@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 type ProjectCardProps = {
+  slug: string;
   title: string;
   description: string;
   technologies: string[];
@@ -6,6 +9,7 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({
+  slug,
   title,
   description,
   technologies,
@@ -37,12 +41,12 @@ export default function ProjectCard({
       </div>
 
       <div className="mt-7">
-        <a
-          href="#contact"
+        <Link
+          href={`/projects/${slug}`}
           className="text-sm font-semibold text-blue-600 transition hover:text-blue-800"
         >
           View Case Study →
-        </a>
+        </Link>
       </div>
     </article>
   );

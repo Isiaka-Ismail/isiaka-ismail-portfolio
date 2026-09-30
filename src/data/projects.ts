@@ -5,12 +5,15 @@ export type Project = {
   shortDescription: string;
   description: string;
   technologies: string[];
+  github: string;
+  image: string;
   problem: string;
   architecture: string;
   implementation: string;
   security: string;
   challenges: string;
   result: string;
+  
 };
 
 export const projects: Project[] = [
@@ -43,7 +46,11 @@ export const projects: Project[] = [
       "Designing the infrastructure without creating single points of failure required careful consideration of availability zones, database failover, service dependencies, and network placement.",
     result:
       "The resulting architecture provides a reproducible infrastructure foundation designed for high availability, automated scaling, monitoring, and controlled failure recovery.",
-  },
+    github: 
+      "https://github.com/isiaka-ismail-portfolio/aws-high-availability",
+    image: 
+      "/projects/aws-ha-placeholder.png",
+    },
 
   {
     slug: "tradecore-cicd",
@@ -73,7 +80,11 @@ export const projects: Project[] = [
       "One challenge was handling vulnerabilities discovered in the underlying Alpine and Node.js dependencies during container scanning.",
     result:
       "The pipeline established an automated quality and security gate between source code changes and container deployment.",
-  },
+    github: 
+      "https://github.com/isiaka-ismail-portfolio/tradecore-cicd",
+    image: 
+      "/projects/tradecore-placeholder.png",
+    },
 
   {
     slug: "hng-devops-infrastructure",
@@ -104,5 +115,9 @@ export const projects: Project[] = [
       "The project involved troubleshooting SSH access, server configuration, application routing, and deployment requirements across multiple stages.",
     result:
       "The application was successfully deployed with hardened SSH access, controlled network exposure, reverse proxying, process management, and HTTPS.",
-  },
+    github: 
+      "https://github.com/isiaka-ismail-portfolio/hng-devops-infrastructure",
+    image: 
+      "/projects/hng-devops-placeholder.png",
+    },
 ];

@@ -240,17 +240,155 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience">
-          <h2>Experience</h2>
-          <p>
-            DevOps and Cloud Engineering projects, infrastructure automation,
-            system administration, and technical projects.
-          </p>
+        <section id="experience" className="bg-slate-50 px-6 py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+                Experience & Journey
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Learning by building and solving real problems.
+              </h2>
+
+              <p className="mt-5 leading-7 text-slate-600">
+                My journey has moved from general IT and technical support into cloud
+                infrastructure, automation, and DevOps engineering.
+              </p>
+            </div>
+
+            <div className="mt-12 max-w-4xl">
+              <div className="relative border-l border-slate-300 pl-8">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full border-4 border-slate-50 bg-blue-600" />
+
+                <p className="text-sm font-medium text-blue-600">
+                  2026 — Present
+                </p>
+
+                <h3 className="mt-2 text-xl font-bold text-slate-900">
+                  DevOps & Cloud Engineering
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  Building hands-on experience across AWS infrastructure, Terraform,
+                  Docker, Kubernetes, CI/CD, Linux administration, cloud security,
+                  and infrastructure automation.
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "AWS",
+                    "Terraform",
+                    "Docker",
+                    "Kubernetes",
+                    "CI/CD",
+                    "Linux",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-slate-700 ring-1 ring-slate-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative mt-12 border-l border-slate-300 pl-8">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full border-4 border-slate-50 bg-slate-400" />
+
+                <p className="text-sm font-medium text-slate-500">
+                  2024 — 2026
+                </p>
+
+                <h3 className="mt-2 text-xl font-bold text-slate-900">
+                  IT & Technical Projects
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  Developed practical experience through technical projects involving
+                  networking, system administration, automation, web technologies,
+                  troubleshooting, and infrastructure.
+                </p>
+              </div>
+
+              <div className="relative mt-12 border-l border-transparent pl-8">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full border-4 border-slate-50 bg-slate-400" />
+
+                <p className="text-sm font-medium text-slate-500">
+                  Education
+                </p>
+
+                <h3 className="mt-2 text-xl font-bold text-slate-900">
+                  B.Sc. Information Technology
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  University of Ilorin, with a focus on information technology,
+                  computing systems, networking, and practical technical work.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section id="certifications">
-          <h2>Certifications</h2>
-          <p>AWS Certified Cloud Practitioner</p>
+        <section id="certifications" className="bg-white px-6 py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+                Certifications & Learning
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Continuous learning through cloud and infrastructure.
+              </h2>
+
+              <p className="mt-5 leading-7 text-slate-600">
+                Certifications support my learning, while hands-on projects demonstrate
+                how I apply the concepts in practical environments.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7">
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-600">
+                  AWS
+                </p>
+
+                <h3 className="mt-3 text-xl font-bold text-slate-900">
+                  AWS Certified Cloud Practitioner
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  Demonstrates foundational knowledge of AWS cloud concepts,
+                  services, security, architecture, and pricing.
+                </p>
+
+                <p className="mt-5 text-sm font-medium text-slate-500">
+                  Certified
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7">
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-600">
+                  AWS
+                </p>
+
+                <h3 className="mt-3 text-xl font-bold text-slate-900">
+                  AWS Solutions Architect
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  Currently developing deeper skills in designing secure, resilient,
+                  scalable, and cost-conscious AWS architectures.
+                </p>
+
+                <p className="mt-5 text-sm font-medium text-slate-500">
+                  In Progress
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="contact">
