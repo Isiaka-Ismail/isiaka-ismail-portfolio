@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -225,47 +226,16 @@ export default function Home() {
             </div>
 
             <div className="mt-12 grid gap-6 lg:grid-cols-2">
-              <ProjectCard
-                category="Cloud Architecture"
-                title="AWS High-Availability Architecture"
-                description="Designed and provisioned a highly available AWS application architecture using Terraform, ECS Fargate, Application Load Balancer, Aurora PostgreSQL, ElastiCache Redis, and multi-region resilience."
-                technologies={[
-                  "AWS",
-                  "Terraform",
-                  "ECS Fargate",
-                  "Aurora",
-                  "ALB",
-                  "Redis",
-                ]}
-              />
-
-              <ProjectCard
-                category="CI/CD & Containers"
-                title="TradeCore CI/CD Pipeline"
-                description="Built a CI/CD workflow for a containerized backend that automates testing, Docker image building, vulnerability scanning, and deployment preparation for AWS."
-                technologies={[
-                  "GitHub Actions",
-                  "Docker",
-                  "Trivy",
-                  "Node.js",
-                  "AWS ECR",
-                  "ECS",
-                ]}
-              />
-
-              <ProjectCard
-                category="Cloud Infrastructure"
-                title="HNG DevOps Infrastructure"
-                description="Deployed and secured production-style applications on AWS EC2 with Linux hardening, SSH security, firewall configuration, Nginx reverse proxying, process management, and HTTPS."
-                technologies={[
-                  "AWS EC2",
-                  "Linux",
-                  "Nginx",
-                  "SSH",
-                  "UFW",
-                  "HTTPS",
-                ]}
-              />
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.slug}
+                  slug={project.slug}
+                  category={project.category}
+                  title={project.title}
+                  description={project.shortDescription}
+                  technologies={project.technologies}
+                />
+              ))}
             </div>
           </div>
         </section>
