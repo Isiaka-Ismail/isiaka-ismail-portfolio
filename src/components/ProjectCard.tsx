@@ -16,7 +16,7 @@ export default function ProjectCard({
   category,
 }: ProjectCardProps) {
   return (
-    <article className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <article className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
       <p className="text-sm font-semibold uppercase tracking-[0.15em] text-blue-600">
         {category}
       </p>

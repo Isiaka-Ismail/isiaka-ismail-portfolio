@@ -9,52 +9,176 @@ export default function Home() {
 
       <main>
         <section
-          id="home"
-          className="relative flex min-h-screen items-center overflow-hidden bg-slate-950 px-6 py-24 text-white"
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.18),_transparent_35%)]" />
+        id="home"
+        className="relative overflow-hidden bg-slate-950 px-6 py-20 text-white sm:py-24 lg:min-h-[92vh] lg:py-24"
+      >
+        {/* Background glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(37,99,235,0.18),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(14,165,233,0.08),transparent_25%)]" />
 
-          <div className="relative mx-auto w-full max-w-6xl">
-            <div className="max-w-3xl">
-              <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+        {/* Technical grid */}
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(148,163,184,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.5) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+
+        <div className="relative z-10 mx-auto max-w-7xl">
+
+          {/* =========================================================
+              MOBILE / TABLET ROLE LABEL
+              ========================================================= */}
+          <div className="mb-8 lg:hidden">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-400/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-blue-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
+              DevOps & Cloud Engineer
+            </div>
+          </div>
+
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_430px] lg:gap-20">
+
+            {/* =========================================================
+                HERO CONTENT
+                ========================================================= */}
+            <div className="order-2 max-w-2xl lg:order-1">
+
+              {/* Desktop role label */}
+              <div className="mb-6 hidden items-center gap-2 rounded-full border border-blue-400/20 bg-blue-400/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-blue-300 lg:inline-flex">
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
                 DevOps & Cloud Engineer
+              </div>
+
+              {/* Name */}
+              <p className="text-lg font-medium text-slate-300 sm:text-xl">
+                Hi, I'm{" "}
+                <span className="font-semibold text-white">
+                  Isiaka Ismail.
+                </span>
               </p>
 
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-                Hi, I'm Isiaka Ismail.
+              {/* Main headline */}
+              <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+                Building infrastructure
+                <span className="block text-blue-400">
+                  that keeps systems moving.
+                </span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+              {/* Description */}
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
                 I build, automate, and secure reliable cloud infrastructure and
-                deployment workflows.
+                deployment workflows using modern DevOps practices.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
+              {/* CTA buttons */}
+              <div className="mt-9 flex flex-wrap gap-4">
                 <a
                   href="#projects"
-                  className="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                  className="rounded-lg bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 transition duration-300 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-blue-500/20"
                 >
-                  View My Projects
+                  Explore My Work
                 </a>
 
                 <a
                   href="#contact"
-                  className="rounded-lg border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-slate-400"
+                  className="rounded-lg border border-slate-700 bg-white/[0.02] px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-slate-500 hover:bg-white/[0.05]"
                 >
                   Get In Touch
                 </a>
               </div>
 
-              <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400">
-                <span>AWS</span>
-                <span>Terraform</span>
-                <span>Docker</span>
-                <span>Kubernetes</span>
-                <span>CI/CD</span>
+              {/* Technology signals */}
+              <div className="mt-12 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-5">
+                {["AWS", "Terraform", "Docker", "Kubernetes", "CI/CD"].map(
+                  (technology) => (
+                    <div
+                      key={technology}
+                      className="rounded-lg border border-slate-800 bg-slate-900/50 px-3 py-3 text-center text-xs font-medium text-slate-400 backdrop-blur transition duration-300 hover:border-blue-500/30 hover:bg-blue-500/5 hover:text-blue-300"
+                    >
+                      {technology}
+                    </div>
+                  ),
+                )}
+              </div>
+
+              {/* Scroll indicator */}
+              <div className="mt-10 hidden items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-600 sm:flex">
+                <span className="h-px w-10 bg-slate-700" />
+                Scroll to explore
               </div>
             </div>
+
+            {/* =========================================================
+                PROFILE IMAGE
+                ========================================================= */}
+            <div className="order-1 mx-auto w-full max-w-[300px] sm:max-w-[350px] lg:order-2 lg:max-w-[430px]">
+
+              <div className="relative">
+
+                {/* Glow */}
+                <div className="absolute -inset-6 rounded-[3rem] bg-blue-600/10 blur-3xl sm:-inset-8" />
+
+                {/* Image frame */}
+                <div className="relative rounded-[1.75rem] border border-slate-700/80 bg-slate-900/70 p-2.5 shadow-2xl backdrop-blur sm:rounded-[2rem] sm:p-3">
+                  <div className="relative overflow-hidden rounded-[1.35rem] sm:rounded-[1.5rem]">
+                    <img
+                      src="/profile.jpeg"
+                      alt="Isiaka Ismail"
+                      className="aspect-[4/5] w-full object-cover object-center"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
+                  </div>
+                </div>
+
+                {/* AWS */}
+                <div className="absolute -left-2 top-8 hidden rounded-xl border border-slate-700 bg-slate-900/95 px-4 py-3 shadow-xl backdrop-blur sm:block sm:-left-8 sm:top-14">
+                  <p className="text-[10px] uppercase tracking-widest text-slate-500">
+                    Cloud
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    AWS
+                  </p>
+                </div>
+
+                {/* Terraform */}
+                <div className="absolute -right-2 top-20 hidden rounded-xl border border-slate-700 bg-slate-900/95 px-4 py-3 shadow-xl backdrop-blur sm:block sm:-right-8 sm:top-28">
+                  <p className="text-[10px] uppercase tracking-widest text-slate-500">
+                    IaC
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    Terraform
+                  </p>
+                </div>
+
+                {/* Kubernetes */}
+                <div className="absolute -left-2 bottom-16 hidden rounded-xl border border-slate-700 bg-slate-900/95 px-4 py-3 shadow-xl backdrop-blur sm:block sm:-left-8 sm:bottom-20">
+                  <p className="text-[10px] uppercase tracking-widest text-slate-500">
+                    Orchestration
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    Kubernetes
+                  </p>
+                </div>
+
+                {/* Status */}
+                <div className="absolute -right-2 bottom-8 hidden rounded-xl border border-blue-400/20 bg-slate-900/95 px-4 py-3 shadow-xl backdrop-blur sm:block sm:-right-8 sm:bottom-10">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+
+                    <span className="text-xs font-semibold text-slate-200">
+                      Building & Automating
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </section>
+        </div>
+      </section>
 
         <section id="about" className="bg-white px-6 py-24">
           <div className="mx-auto max-w-6xl">

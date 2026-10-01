@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Isiaka Ismail | DevOps & Cloud Engineer",
   description:
-    "Portfolio of Isiaka Ismail, a DevOps and Cloud Engineer focused on cloud infrastructure, automation, and reliable deployment workflows.",
+  "Isiaka Ismail is a DevOps and Cloud Engineer focused on AWS, Terraform, Kubernetes, CI/CD, automation, and reliable cloud infrastructure.",
 };
 
 export default function RootLayout({
