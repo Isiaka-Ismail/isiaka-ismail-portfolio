@@ -52,38 +52,45 @@ export const projects: Project[] = [
       "/projects/aws-ha-placeholder.png",
     },
 
-  {
-    slug: "tradecore-cicd",
-    title: "TradeCore CI/CD Pipeline",
-    category: "CI/CD & Containers",
+  
+    {
+    slug: "tradecore-finops",
+    title: "TradeCore FinOps",
+    category: "Cloud Engineering & FinOps",
     shortDescription:
-      "Automated CI/CD workflow for testing, containerization, security scanning, and AWS deployment.",
+        "A budget-conscious AWS deployment combining containerized application delivery, security controls, automated CI/CD, observability, and cost governance.",
     description:
-      "Built a CI/CD workflow for a containerized backend application using GitHub Actions and AWS container services.",
+        "TradeCore Deploy focused on preparing a transactional platform for a 14-day institutional banking audit. The project brings together AWS infrastructure, application deployment, identity integration, automated delivery, operational monitoring, and financial governance under a startup budget constraint.",
     technologies: [
-      "GitHub Actions",
-      "Docker",
-      "Trivy",
-      "Node.js",
-      "AWS ECR",
-      "Amazon ECS",
+        "AWS",
+        "Terraform",
+        "Docker",
+        "Amazon ECS Fargate",
+        "Amazon ECR",
+        "Amazon RDS PostgreSQL",
+        "Amazon Cognito",
+        "AWS Secrets Manager",
+        "Application Load Balancer",
+        "GitHub Actions",
+        "OIDC",
+        "Amazon CloudWatch",
+        "AWS Budgets",
+        "Amazon SNS",
     ],
+    github: "https://github.com/tradecore-africa/tradecore",
+    image: "/projects/tradecore-finops.png",
     problem:
-      "The application needed a repeatable workflow for validating code, building container images, scanning them for vulnerabilities, and preparing them for deployment.",
+        "Prepare a containerized transactional application for a technical banking audit within a short delivery window and a strict cloud budget. The environment needed secure authentication, reliable application and database connectivity, repeatable deployments, operational visibility, and a documented cost-control strategy.",
     architecture:
-      "The pipeline connects source control with automated testing, Docker image creation, vulnerability scanning, Amazon ECR, and ECS deployment workflows.",
+        "The React frontend is hosted on AWS Amplify and communicates with a Node.js REST API running on Amazon ECS Fargate. An Application Load Balancer provides HTTPS ingress, Amazon Cognito manages user authentication, Amazon RDS for PostgreSQL provides relational storage, Amazon ECR stores container images, and AWS Secrets Manager supplies sensitive runtime configuration. CloudWatch and SNS support monitoring and operational alerts.",
     implementation:
-      "GitHub Actions was configured to install dependencies, run tests, build the Docker image, perform Trivy security scanning, and push validated images to Amazon ECR.",
+        "The project covers cost estimation and budget alerts before provisioning, infrastructure configuration with Terraform, database schema migration, container image publishing, ECS deployment, Cognito integration, and frontend configuration. GitHub Actions supports automated staging delivery through OIDC authentication, while production promotion uses a manual approval gate. Scheduled staging scale-down and an ordered teardown runbook address ongoing and end-of-project costs.",
     security:
-      "Container images are scanned for known vulnerabilities before being accepted into the deployment workflow.",
+        "Security controls include HTTPS through ACM and the Application Load Balancer, security-group rules that restrict API ingress to the load balancer, database access limited to the application tier, Secrets Manager integration, Cognito token verification, and short-lived AWS credentials through GitHub Actions OIDC. The public-subnet ECS design is documented as a deliberate cost trade-off, with inbound access restricted to the load balancer rather than the public internet.",
     challenges:
-      "One challenge was handling vulnerabilities discovered in the underlying Alpine and Node.js dependencies during container scanning.",
+        "The main architectural trade-off was eliminating the recurring baseline cost of a managed NAT Gateway during a short evaluation period. Public-subnet ECS tasks can reach required AWS services without NAT, but their public IP addresses make strict inbound security-group controls essential. The project documents migration options for a higher-budget production environment, including private subnets with NAT Gateways or suitable VPC endpoints.",
     result:
-      "The pipeline established an automated quality and security gate between source code changes and container deployment.",
-    github: 
-      "https://github.com/isiaka-ismail-portfolio/tradecore-cicd",
-    image: 
-      "/projects/tradecore-placeholder.png",
+        "The project notes report a 184 MB container image, a 4-minute-12-second staging deployment, and a 2-minute-34-second rollback recovery drill. They also report successful API smoke tests, end-to-end authentication and transaction testing, CI/CD approval controls, and an operational monitoring and teardown plan. Cost governance is built around a $25 monthly AWS Budget with 50% and 90% alert thresholds. Final actual spend should be supported by the AWS Cost Explorer report.",
     },
 
   {
